@@ -1,0 +1,61 @@
+create table cust_table(
+cust_id int auto_increment PRIMARY KEY,
+cust_fName varchar(255),
+cust_mName varchar(255),
+cust_lName varchar(255),
+cust_email varchar(255),
+cust_mobile varchar(255),
+cust_alternateMobile varchar(255),
+cust_address varchar(255),
+cust_gender varchar(255),
+cust_maritalStatus varchar(255),
+cust_dob varchar(255),
+cust_anniversaryDate varchar(255),
+cust_spouseName varchar(255),
+cust_spouseDob varchar(255),
+cust_fatherName varchar(255),
+cust_fatherDob varchar(255),
+cust_motherName varchar(255),
+cust_motherDob varchar(255),
+cust_members JSON,
+cust_reference varchar(255)
+);
+
+alter table cust_table
+add cust_anniversaryDate varchar(255),
+add cust_spouseName varchar(255),
+add cust_spouseDob varchar(255);
+
+create table cust_bookings(
+booking_id int auto_increment PRIMARY KEY,
+cust_id int,
+cust_name varchar(255),
+cust_mobile varchar(255),
+booking_date varchar(255),
+booking_time varchar(255),
+theme_name varchar(255),
+theme_price int,
+FOREIGN KEY (cust_id) REFERENCES cust_table(cust_id));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
